@@ -16,12 +16,12 @@ public class UnOrderedList {
 			{
 				newNode = new MyNode<String>(word);
 				linkedList.append(newNode);
-				System.out.println(word + " is added ");
+				System.out.println(word + " is added");
 			} 
 			else 
 			{
 				linkedList.delete(word);
-				System.out.println(word + " is deleted ");
+				System.out.println(word + " is deleted");
 			}
 		}
 		linkedList.printMyNodes();
