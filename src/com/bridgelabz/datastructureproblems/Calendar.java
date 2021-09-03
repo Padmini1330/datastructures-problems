@@ -13,19 +13,19 @@ public class Calendar
 	{
 		String[][] calendar = new String[7][7];
 		Year year = Year.of(2021);
-		Month month = Month.JANUARY;
+		Month month = Month.SEPTEMBER;
 		YearMonth yearMonth = YearMonth.of(year.getValue(), month);
 		DayOfWeek firstDayWeek = yearMonth.atDay(1).getDayOfWeek();
 		int firstDayWeekValue = firstDayWeek.getValue();
 		int max = yearMonth.lengthOfMonth();
 		String[] current = calendar[0];
 
-		for (int i = 0; i < 7; i++) 
+		for (int index = 0; index < 7; index++) 
 		{
-			current[i] = DayOfWeek.of(i + 1).toString().substring(0, 3);
+			current[index] = DayOfWeek.of(index + 1).toString().substring(0, 3);
 		}
 		current = calendar[1];
-		Arrays.fill(current, " .");
+		Arrays.fill(current, "  ");
 		boolean started = false;
 		int day = 1;
 
@@ -48,7 +48,7 @@ public class Calendar
 			{
 				if (day > max) 
 				{
-					Arrays.fill(current, j, 7, " .");
+					Arrays.fill(current, j, 7, "  ");
 					break;
 				}
 				current[j] = " " + day++;
